@@ -5,24 +5,18 @@
 #include <algorithm>
 using namespace std;
 
-int main(){
-    int t,count;
-    cin >> t;
-    for(int a0 = 0; a0 < t; a0++){
-        int n;
-        int k;
-        cin >> n >> k;
-        count=0;
-        vector<int> a(n);
-        for(int a_i = 0;a_i < n;a_i++){
-           cin >> a[a_i];
-            if(a[a_i]<=0)
-                count++;
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int q; cin>>q;
+    while(q--){
+        int n,k,c=0,x; cin >> n >> k;
+        while(n--){
+            cin >> x;
+            if(x<1) c++;
         }
-        if(count<k)
-            cout << "YES" << endl ;
-        else
-            cout << "NO" << endl ;
+        if(c>=k) cout << "NO"<< endl;
+        else cout << "YES"<< endl;
     }
     return 0;
 }
